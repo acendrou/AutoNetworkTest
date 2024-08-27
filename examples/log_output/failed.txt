@@ -1,0 +1,65 @@
+/home/alex/Documents/INFO/LANG/PYTHON/PycharmProjects/dev-env-test-tool/bin/python /home/alex/Documents/INFO/THEME/PROJET-DIVERS/dev-env-test-tool/src/main.py
+Basic dev env test automation - 0.1
+STARTING
+New config file found: /home/alex/Documents/INFO/THEME/PROJET-DIVERS/dev-env-test-tool/test1.test
+**********************
+config file parsing: software platform key: eve-ng
+config file parsing: api_ip_address key: 192.168.1.129
+config file parsing: api_credentials_user_name key: admin
+config file parsing: api_credentials_user_password key: eve
+config file parsing: lab name key: TEST
+config file parsing: scenario_name key: premier test
+config file parsing: machine_name key: VyOS-1
+config file parsing: type_machine key: vyos
+config file parsing: action key: ping
+config file parsing: parameters key: 192.168.5.3
+config file parsing: scenario_name key: test 2
+config file parsing: machine_name key: VyOS-1
+config file parsing: type_machine key: vyos
+config file parsing: action key: ping
+config file parsing: parameters key: 192.168.5.4
+TESTS Loaded
+/home/alex/Documents/INFO/THEME/PROJET-DIVERS/dev-env-test-tool/test1.test
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TYPE 1:
+lab name: TEST
+TEST/SCENARIO NAME: premier test
+machine name: VyOS-1
+type machine: vyos
+action: ping
+parameters: 192.168.5.3
+{'console': 'telnet', 'delay': 0, 'id': 1, 'left': 480, 'icon': 'Router-2D-Gen-Grey-S.svg', 'image': 'vyos-1.5-amd64', 'name': 'VyOS-1', 'ram': 512, 'status': 2, 'template': 'vyos', 'type': 'qemu', 'top': 258, 'url': 'telnet://192.168.1.129:32769', 'config_list': [], 'config': 0, 'cpu': 1, 'ethernet': 4, 'uuid': 'a99f740d-12f9-4fc2-b194-f03a4509b033'}
+command: ping 192.168.5.3
+
+b'\x1b]0;VyOS-1\x07^C\r\n'
+ping failed
+b'vyos@vyos-1:~$ ping 192.168.5.3\r\n'
+ping failed
+b'PING 192.168.5.3 (192.168.5.3) 56(84) bytes of data.\r\n'
+ping failed
+b'64 bytes from 192.168.5.3: icmp_seq=1 ttl=64 time=0.862 ms\r\n'
+ping successful
+TYPE 1:
+lab name: TEST
+TEST/SCENARIO NAME: test 2
+machine name: VyOS-1
+type machine: vyos
+action: ping
+parameters: 192.168.5.4
+{'console': 'telnet', 'delay': 0, 'id': 1, 'left': 480, 'icon': 'Router-2D-Gen-Grey-S.svg', 'image': 'vyos-1.5-amd64', 'name': 'VyOS-1', 'ram': 512, 'status': 2, 'template': 'vyos', 'type': 'qemu', 'top': 258, 'url': 'telnet://192.168.1.129:32769', 'config_list': [], 'config': 0, 'cpu': 1, 'ethernet': 4, 'uuid': 'a99f740d-12f9-4fc2-b194-f03a4509b033'}
+command: ping 192.168.5.4
+
+b'\x1b]0;VyOS-1\x07^C\r\n'
+ping failed
+b'vyos@vyos-1:~$ ping 192.168.5.4\r\n'
+ping failed
+b'PING 192.168.5.4 (192.168.5.4) 56(84) bytes of data.\r\n'
+ping failed
+b'From 192.168.5.2 icmp_seq=1 Destination Host Unreachable\r\n'
+ping failed
+Passed ; 1/2
+Failed ; 1/2
+Error ; 0/2
+FAILED: All tests have been done and results are unsuccesfull
+
+Process finished with exit code 255

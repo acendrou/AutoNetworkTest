@@ -1,0 +1,24 @@
+[config_test_environment]
+software_platform = eve-ng
+# only support for eve-ng now, GNS3 in future
+api_ip_address = 192.168.1.129
+api_credentials_user_name = admin
+api_credentials_user_password = eve
+
+[config_lab]
+lab_name = TEST
+
+[scenario1]
+scenario_name = premier test
+machine_name = VyOS-1
+type_machine = vyos
+action = ping
+parameters = 192.168.5.3
+
+
+[scenario2]
+scenario_name = test 2
+machine_name = VyOS-1
+type_machine = vyos
+action = ping
+parameters = 192.168.5.4
